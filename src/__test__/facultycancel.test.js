@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { shallow, mount, configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 //import Studenttimetable from './Studenttimetable';
 import Cancelclass from '../components/cancelclass.jsx';
 import Adapter from 'enzyme-adapter-react-16';
