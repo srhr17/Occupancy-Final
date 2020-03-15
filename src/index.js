@@ -26,7 +26,7 @@ import studentroomwise from './studentroomwise.js';
 import studentfree from './studentfree';
 import Viewcancelclass from './viewcancelclass';
 
-import Time from './Time.jsx';
+import Time from './TIme.jsx';
 import Login from './Login.jsx';
 
 import Studentlogin from './Appstudent.js';
