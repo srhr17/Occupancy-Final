@@ -31,15 +31,16 @@ class freeslotfaculty extends Component {
 					Time :<Clock format={'HH:mm:ss'} ticking={true} timezone={'Asia/Calcutta'} />
 					{'   '}
 				</h2>
+
+				<br />
 				<br />
 				<br />
 				<form
 					method="POST"
+					id="formero"
 					action="http://localhost:8000/freeslotsfaculty"
-					style={{ marginLeft: '30%', marginRight: '40%' }}
+					style={{ marginLeft: '40%' }}
 				>
-					{/* <input type="number" placeholder={sessionStorage.getItem('fid')} name="fid" style={{ marginLeft: '500px' }} />
-					<input type="submit" /> */}
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">Faculty ID</span>
