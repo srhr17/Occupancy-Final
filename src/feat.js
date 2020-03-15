@@ -130,7 +130,7 @@ handleValidation3(){
 }
 
 
-contactSubmit2(e){
+contactSubmit3(e){
 
     if(this.handleValidation2()){
        alert("Form submitted");
