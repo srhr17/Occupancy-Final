@@ -38,7 +38,7 @@ import faqs from './faqs.jsx';
 
 import Feature from './feat.js';
 
-import Room from './rooms.js';
+import Room from './Room.js';
 import adminlogin from './adminapp.js';
 import Booking from './booking.js';
 import Student from './stud.js';
