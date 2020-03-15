@@ -1,6 +1,10 @@
-![Node.js CI](https://github.com/srhr17/Occupancy-Final/workflows/Node.js%20CI/badge.svg?branch=master)
+![Node.js CI](https://github.com/srhr17/Occupancy-Final/workflows/Node.js%20CI/badge.svg?branch=master)    
 
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=srhr17_sp)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=srhr17_sp&metric=alert_status)](https://sonarcloud.io/dashboard?id=srhr17_sp)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=srhr17_sp)](https://sonarcloud.io/dashboard?id=srhr17_sp)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
