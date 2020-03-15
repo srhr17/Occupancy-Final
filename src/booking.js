@@ -1,6 +1,6 @@
 //import Blank from './';
 import React from "react";
-import css from "./css.css";
+//import css from "./css.css";
 class Booking extends React.Component {
   constructor(props){
     super(props);

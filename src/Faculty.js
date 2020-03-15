@@ -1,7 +1,7 @@
 //import Blank from './';
 import React from "react";
 
-import css from './css.css';
+//import css from './css.css';
 class Faculty extends React.Component {
 constructor(props){
     super(props);

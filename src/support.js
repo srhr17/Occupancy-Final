@@ -21,32 +21,21 @@ class support extends Component {
 	
 	}
 
-	Studenttimetable = (event) => {
-		window.history.pushState(null, 'Studenttimetable', '/Studenttimetable');
-		window.location.reload();
-	};
 
-	studentroomwise = (event) => {
-		window.history.pushState(null, 'studentroomwise', '/studentroomwise');
-		window.location.reload();
-	};
 
-	studentfree = (event) => {
-		window.history.pushState(null, 'studentfree', '/studentfree');
-		window.location.reload();
-	};
-	studentfeat = (event) => {
-		window.history.pushState(null, 'studentfeat', '/studentfeat');
-		window.location.reload();
-	};
-	studentfacu = (event) => {
-		window.history.pushState(null, 'studentfacu', '/studentfacu');
-		window.location.reload();
-	};
     faqs = () => {
         window.history.pushState(null,"str","/faqs");
         window.location.reload();
+	  };
+	  feedback = () => {
+        window.history.pushState(null,"str","/feedback");
+        window.location.reload();
+	  };
+	  contactus = () => {
+        window.history.pushState(null,"str","/contactus");
+        window.location.reload();
       };
+
 
 	render() {
 		return (

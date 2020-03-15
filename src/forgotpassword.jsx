@@ -112,7 +112,7 @@ callpassword()
                     } else {
                       e.preventDefault();
                       alert("submit");
-                    var value=this;
+                    
                     var formdata= new FormData(document.getElementById("custrom"));
                     var data= new URLSearchParams();
                     for (var pair of formdata) {
