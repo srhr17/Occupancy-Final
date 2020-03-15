@@ -35,7 +35,7 @@ class feedback extends Component {
   };
 
   submit = event => {
-    var value=this;
+//    var value=this;
     var formdata= new FormData(document.getElementById("custrm"));
     var data= new URLSearchParams();
     var ft=0
