@@ -68,26 +68,28 @@ class requestroombooking extends Component {
 					</div>
 
 					<br />
+					<br />
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">Day</span>
 						</div>
-
-						<select name="day" class="form-control " data-style="btn-inverse" id="day">
-							<option value="MONDAY">MONDAY</option>
-							<option value="TUESDAY">TUESDAY</option>
-							<option value="WEDNESDAY">WEDNESDAY</option>
-							<option value="THURSDAY">THURSDAY</option>
-							<option value="FRIDAY">FRIDAY</option>
+						<br />
+						<select name="day" class="form-control " data-style="btn-inverse" id="day1">
+							<option value="MONDAY">Monday</option>
+							<option value="TUESDAY">Tuesday</option>
+							<option value="WEDNESDAY">Wednesday</option>
+							<option value="THURSDAY">Thursday</option>
+							<option value="FRIDAY">Friday</option>
 						</select>
 					</div>
 					<br />
-					<div class="input-group">
+					<br />
+					<div id="yess" class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">Time</span>
 						</div>
 
-						<select name="time" class="form-control" id="time">
+						<select name="time" class="form-control" id="timey">
 							<option value="period1">08:45 - 9:30</option>
 							<option value="period2">09:30 - 10:20</option>
 							<option value="period3">10:20 - 11:10</option>
@@ -101,7 +103,7 @@ class requestroombooking extends Component {
 					</div>
 					<br />
 					<br />
-
+					<br />
 					<button type="submit" data-testid="submitbutton" class="btn btn-dark" style={{ marginLeft: '40%' }}>
 						Submit
 					</button>
