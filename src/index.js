@@ -34,7 +34,7 @@ import Studentlogin from './studentlogin.js';
 import support from './support.js';
 import faqs from './faqs.jsx';
 
-import Feature from './feat.js';
+import Feature from './Feature.js';
 import contactus from './contactus.jsx';
 import Room from './Room.js';
 import adminlogin from './adminlogin.js';
