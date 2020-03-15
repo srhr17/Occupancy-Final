@@ -90,8 +90,8 @@ class requestroombooking extends Component {
 								Time of Class
 							</span>
 						</div>
-						<div>
-							<select name="time" class="form-control" id="timey">
+						<div class="hulu">
+							<select name="time" class="form-control" id="timeyy">
 								<option value="period1">08:45 - 9:30</option>
 								<option value="period2">09:30 - 10:20</option>
 								<option value="period3">10:20 - 11:10</option>
