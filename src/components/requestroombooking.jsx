@@ -92,15 +92,15 @@ class requestroombooking extends Component {
 						</div>
 						<div class="hulu">
 							<select name="time" class="form-control" id="timeyy">
-								<option value="period1">08:45 - 9:30</option>
-								<option value="period2">09:30 - 10:20</option>
-								<option value="period3">10:20 - 11:10</option>
-								<option value="period4">11:20 - 12:10</option>
-								<option value="period5">12:10 - 01:00</option>
-								<option value="period6">01:00 - 02:00</option>
-								<option value="period7">02:00 - 02:50</option>
-								<option value="period8">02:50 - 03:40</option>
-								<option value="period9">03:40 - 04:10</option>
+								<option value="period1">08:45-9:30</option>
+								<option value="period2">09:30-10:20</option>
+								<option value="period3">10:20-11:10</option>
+								<option value="period4">11:20-12:10</option>
+								<option value="period5">12:10-01:00</option>
+								<option value="period6">01:00-02:00</option>
+								<option value="period7">02:00-02:50</option>
+								<option value="period8">02:50-03:40</option>
+								<option value="period9">03:40-04:10</option>
 							</select>
 						</div>
 					</div>
