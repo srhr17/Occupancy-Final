@@ -29,7 +29,7 @@ import Viewcancelclass from './viewcancelclass';
 import Time from './TIme.jsx';
 import Login from './login.jsx';
 
-import Studentlogin from './Appstudent.js';
+import Studentlogin from './studentlogin.js';
 
 import support from './support.js';
 import faqs from './faqs.jsx';
