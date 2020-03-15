@@ -37,12 +37,13 @@ import support from './support.js';
 import faqs from './faqs.jsx';
 
 import Feature from './feat.js';
-
+import contactus from './contactus.jsx';
 import Room from './Room.js';
 import adminlogin from './adminapp.js';
 import Booking from './booking.js';
 import Student from './stud.js';
 import Adminfaculty from './fac.js';
+import feedback from './feedback.jsx';
 ReactDOM.render(
 	<React.Fragment>
 		<Router>
@@ -63,8 +64,8 @@ ReactDOM.render(
     <Route exact path="/support" component={support} />
 			<Route exact path="/faqs" component={faqs} />
         	
-    
-    
+    	<Route exact path="/contactus" component={contactus} />
+    	<Route exact path="/feedback" component={feedback} />
     
     
 				<Route exact path="/faculty" component={App} />
