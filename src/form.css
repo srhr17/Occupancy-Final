@@ -19,7 +19,7 @@ body {
 	-webkit-filter: blur(3px);
   filter: blur(3px);
   opacity: 0.6;
-  filter: alpha(opacity=60);
+/*  filter: alpha(opacity=60);*/
 }
 .form-container
 {
