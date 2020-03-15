@@ -48,6 +48,6 @@ jobs:
           node-version: ${{ matrix.node-version }}      
       - run: npx percy -v
       - run: npm install --save-dev @percy/cypress  
-      - run: npx percy exec -- cypress run  
+      - run: percy exec -- cypress run  
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
