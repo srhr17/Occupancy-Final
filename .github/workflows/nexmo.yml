@@ -1,0 +1,16 @@
+name: Push to master
+on: [push]
+jobs:
+  send-sms:
+    name: Send SMS
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send SMS
+      uses: nexmo-community/nexmo-sms-action@master
+      env:
+        NEXMO_API_KEY: ${{ secrets.NEXMO_API_KEY }}
+        NEXMO_API_SECRET: ${{ secrets.NEXMO_API_SECRET }}
+      with:
+        nexmoNumber: ${{ secrets.NEXMO_NUMBER }}
+        recipientNumber: 9443305978
+        message: "New push on ${{ github.repository }} from ${{ github.actor }}"
