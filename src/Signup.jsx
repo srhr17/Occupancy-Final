@@ -126,7 +126,8 @@ class Signup extends Component {
 										style={{
 											backgroundImage:
 												'url(https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg)',
-											width: '26rem'
+											width: '26rem',
+											marginLeft: '250px'
 										}}
 									>
 										<div className="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
