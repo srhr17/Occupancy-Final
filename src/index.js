@@ -61,7 +61,7 @@ ReactDOM.render(
     
     
     
-    <Route exact path="/support" component={support} />
+//    <Route exact path="/support" component={support} />
 			<Route exact path="/faqs" component={faqs} />
         	
     	<Route exact path="/contactus" component={contactus} />
@@ -87,6 +87,7 @@ ReactDOM.render(
     	<Route exact path="/forgotpassword" component={forgotpassword} />
      <Route component={adminlogin} />
     <Route component={Studentlogin} />
+      <Route component={support} />
     
 				<Route component={App} />
 			</Switch>
