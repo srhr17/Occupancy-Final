@@ -42,8 +42,6 @@ class cancelclass extends Component {
 								action="http://localhost:8000/cancelclass"
 								style={{ marginLeft: '30%', marginRight: '40%' }}
 							>
-								{/* <input type="number" placeholder={sessionStorage.getItem('fid')} style={{ marginLeft: '500px' }} />
-					<input type="submit" /> */}
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Section</span>
