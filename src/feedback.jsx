@@ -1,14 +1,5 @@
 import React from 'react';
-//import {
-//    Container,
-//    Col,
-//    Form,
-//    FormGroup,
-//    Label,
-//    Input,
-//    Button
-//  } from "reactstrap";
-import Form from 'reactstrap';
+import { Form } from 'reactstrap';
 import { Component } from 'react';
 import './form.css';
 
