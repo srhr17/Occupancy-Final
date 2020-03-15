@@ -6,6 +6,7 @@
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=srhr17_sp)](https://sonarcloud.io/dashboard?id=srhr17_sp)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aab6a50c-b53b-4cf5-88c7-6c2dea1ac7ad/deploy-status)](https://app.netlify.com/sites/gallant-rosalind-816fb2/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
