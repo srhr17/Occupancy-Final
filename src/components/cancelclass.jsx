@@ -3,10 +3,54 @@ import { MDBAnimation } from 'mdbreact';
 import './SCSS.css';
 import Logout from './logout.jsx';
 import Clock from 'react-live-clock';
-class cancelclass extends Component {
-	constructor(props) {
+class Cancelclass extends Component {
+	constructor() {
 		super();
+		this.state = {
+			class: '',
+			sem: '',
+			day: '',
+			time: '',
+
+			errors: {
+				class: ' ',
+				sem: ' ',
+				day: ' ',
+				time: ' '
+			}
+		};
 	}
+
+	validateForm = (errors) => {
+		let valid = true;
+		Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
+		return valid;
+	};
+
+	handleChange = (e) => {
+		const { name, value } = e.target;
+		let errors = this.state.errors;
+		switch (name) {
+			case 'class':
+				errors.class = value === ' ' ? 'Select class' : '';
+				break;
+
+			case 'sem':
+				errors.sem = value === ' ' ? 'Select sem' : '';
+				break;
+			case 'day':
+				errors.day = value === ' ' ? 'Select day' : '';
+				break;
+			case 'time':
+				errors.time = value === ' ' ? 'Select time' : '';
+				break;
+
+			default:
+				break;
+		}
+
+		this.setState({ errors, [name]: value });
+	};
 
 	render() {
 		return (
@@ -55,7 +99,6 @@ class cancelclass extends Component {
 										<option value="F">CSE F</option>
 									</select>
 								</div>
-
 								<br />
 								<div class="input-group">
 									<div class="input-group-prepend">
@@ -84,6 +127,7 @@ class cancelclass extends Component {
 									</select>
 								</div>
 								<br />
+
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Time</span>
@@ -101,10 +145,8 @@ class cancelclass extends Component {
 										<option value="period9">03:40 - 04:10</option>
 									</select>
 								</div>
-
 								<br />
 								<br />
-
 								<button
 									type="submit"
 									data-testid="submitbutton"
@@ -123,4 +165,4 @@ class cancelclass extends Component {
 	}
 }
 
-export default cancelclass;
+export default Cancelclass;

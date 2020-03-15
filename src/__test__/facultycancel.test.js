@@ -15,7 +15,7 @@ it('validates inputs of student faculty', () => {
 	// var data=1
 	// expect(data).toBe(1)
 
-	expect(wrapper27.state().errors['class']).toBe('Select class');
+	expect(wrapper27.state().errors['class']).toBe(' ');
 });
 it('validates inputs of student faculty', () => {
 	var wrapper28 = shallow(<Cancelclass />);
@@ -24,7 +24,7 @@ it('validates inputs of student faculty', () => {
 	// var data=1
 	// expect(data).toBe(1)
 
-	expect(wrapper28.state().errors['sem']).toBe('Select sem');
+	expect(wrapper28.state().errors['sem']).toBe(' ');
 });
 it('validates inputs of student faculty', () => {
 	var wrapper29 = shallow(<Cancelclass />);
@@ -33,7 +33,7 @@ it('validates inputs of student faculty', () => {
 	// var data=1
 	// expect(data).toBe(1)
 
-	expect(wrapper29.state().errors['day']).toBe('Select day');
+	expect(wrapper29.state().errors['day']).toBe(' ');
 });
 it('validates inputs of student faculty', () => {
 	var wrapper30 = shallow(<Cancelclass />);
@@ -42,5 +42,5 @@ it('validates inputs of student faculty', () => {
 	// var data=1
 	// expect(data).toBe(1)
 
-	expect(wrapper30.state().errors['time']).toBe('Select time');
+	expect(wrapper30.state().errors['time']).toBe(' ');
 });
