@@ -20,7 +20,7 @@ import Requestroombooking from './components/requestroombooking.jsx';
 import forgotpassword from './forgotpassword';
 
 import studentfeat from './studentfeat';
-import studentfacu from './studentfacu.js';
+import studentfacu from './Studentfacu.js';
 import studenttimetable from './Studenttimetable.js';
 import studentroomwise from './studentroomwise.js';
 import studentfree from './studentfree';
