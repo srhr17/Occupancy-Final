@@ -41,3 +41,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Percy Test
+        uses: percy/exec-action@v0.1.1
+        with:
+          command: "cypress run"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
