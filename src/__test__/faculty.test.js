@@ -19,11 +19,11 @@ it('validates inputs of faculty', () => {
 	var wrapper22 = shallow(<Facultytimetable />);
 	wrapper22.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: ' ' } });
 
-	wrapper23.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: '401' } });
-	wrapper24.find('[data-testid="submitbutton"]').at(0).simulate('click');
+	wrapper22.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: '401' } });
+	wrapper22.find('[data-testid="submitbutton"]').at(0).simulate('click');
 	// var data=1
 	// expect(data).toBe(1)
-	expect(wrapper24.state().errors['fid']).toBe('');
+	expect(wrapper22.state().errors['fid']).toBe('');
 });
 
 it('validates inputs of faculty time table-sem', () => {
