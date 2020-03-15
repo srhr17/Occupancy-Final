@@ -1,6 +1,6 @@
 
 import React from "react";
-import css from './css.css';
+//import css from './css.css';
 
 class Student extends React.Component {
     constructor(props){

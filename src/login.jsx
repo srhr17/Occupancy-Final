@@ -8,17 +8,13 @@ import "mdbreact/dist/css/mdb.css";
 import {
   BrowserRouter as Router,
   Link,
-  NavLink,
-  Redirect
+  NavLink
+//  Redirect
 } from "react-router-dom";
 import {
-  Container,
+
   Col,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Button
+  Form
 } from "reactstrap";
 
 
@@ -245,5 +241,5 @@ class Login extends Component {
     </html>
   );
 }
-};
+}
 export default Login;

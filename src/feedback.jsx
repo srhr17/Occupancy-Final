@@ -1,13 +1,13 @@
 import React from "react";
-import {
-    Container,
-    Col,
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    Button
-  } from "reactstrap";
+//import {
+//    Container,
+//    Col,
+//    Form,
+//    FormGroup,
+//    Label,
+//    Input,
+//    Button
+//  } from "reactstrap";
   import  { Component } from "react";
 import './form.css'
 
@@ -126,5 +126,5 @@ class feedback extends Component {
     </Form>
   );
 }
-};
+}
 export default feedback;

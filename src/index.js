@@ -12,7 +12,7 @@ import Roomtimetable from './components/Roomtimetable.jsx';
 import Freeslotfaculty from './components/freeslotfaculty.jsx';
 import Roomfeat from './components/roomfeatures.jsx';
 import Cancelclass from './components/cancelclass.jsx';
-import Signup from './loginpage.jsx';
+import Signup from './Signup.jsx';
 import 'mdbreact/dist/css/mdb.css';
 import './login.css';
 import Requestroombooking from './components/requestroombooking.jsx';
@@ -20,15 +20,15 @@ import Requestroombooking from './components/requestroombooking.jsx';
 import forgotpassword from './forgotpassword';
 
 import studentfeat from './studentfeat';
-import studentfacu from './studentfac.js';
+import studentfacu from './Studentfacu.js';
 import studenttimetable from './Studenttimetable.js';
 import studentroomwise from './studentroomwise.js';
 import studentfree from './studentfree';
-import Viewcancelclass from './viewcancelclass';
+import Viewcancelclass from './Viewcancelclass';
 
 
 import Time from './Time.jsx';
-import Login from './login.jsx';
+import Login from './Login.jsx';
 
 
 import Studentlogin from './Appstudent.js';
@@ -39,9 +39,9 @@ import faqs from './faqs.jsx';
 import Feature from './feat.js';
 import contactus from './contactus.jsx';
 import Room from './Room.js';
-import adminlogin from './adminapp.js';
+import adminlogin from './adminlogin.js';
 import Booking from './booking.js';
-import Student from './stud.js';
+import Student from './Student.js';
 import Faculty from './Faculty.js';
 import feedback from './feedback.jsx';
 ReactDOM.render(
