@@ -7,39 +7,39 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 it('validates inputs of faculty', () => {
-	var wrapper = shallow(<Facultytimetable />);
-	wrapper.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: ' ' } });
-	wrapper.find('[data-testid="submitbutton"]').at(0).simulate('click');
+	var wrapper21 = shallow(<Facultytimetable />);
+	wrapper21.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: ' ' } });
+	wrapper21.find('[data-testid="submitbutton"]').at(0).simulate('click');
 	// var data=1
 	// expect(data).toBe(1)
-	expect(wrapper.state().errors['fid']).toBe('Select id');
+	expect(wrapper21.state().errors['fid']).toBe('Select id');
 });
 
 it('validates inputs of faculty', () => {
-	var wrapper = shallow(<Facultytimetable />);
-	wrapper.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: ' ' } });
+	var wrapper22 = shallow(<Facultytimetable />);
+	wrapper22.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: ' ' } });
 
-	wrapper.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: '401' } });
-	wrapper.find('[data-testid="submitbutton"]').at(0).simulate('click');
+	wrapper23.find('[name="fid"]').at(0).simulate('change', { target: { name: 'fid', value: '401' } });
+	wrapper24.find('[data-testid="submitbutton"]').at(0).simulate('click');
 	// var data=1
 	// expect(data).toBe(1)
-	expect(wrapper.state().errors['fid']).toBe('');
+	expect(wrapper24.state().errors['fid']).toBe('');
 });
 
 it('validates inputs of faculty time table-sem', () => {
-	var wrapper = shallow(<Facultytimetable />);
-	wrapper.find('[name="sem"]').at(0).simulate('change', { target: { name: 'sem', value: ' ' } });
-	wrapper.find('[data-testid="submitbutton"]').at(0).simulate('click');
+	var wrapper25 = shallow(<Facultytimetable />);
+	wrapper25.find('[name="sem"]').at(0).simulate('change', { target: { name: 'sem', value: ' ' } });
+	wrapper25.find('[data-testid="submitbutton"]').at(0).simulate('click');
 	// var data=1
 	// expect(data).toBe(1)
-	expect(wrapper.state().errors['sem']).toBe('Select sem');
+	expect(wrapper25.state().errors['sem']).toBe('Select sem');
 });
 it('validates inputs of faculty time table-sem', () => {
-	var wrapper = shallow(<Facultytimetable />);
+	var wrapper26 = shallow(<Facultytimetable />);
 
-	wrapper.find('[name="sem"]').at(0).simulate('change', { target: { name: 'sem', value: '2' } });
-	wrapper.find('[data-testid="submitbutton"]').at(0).simulate('click');
+	wrapper26.find('[name="sem"]').at(0).simulate('change', { target: { name: 'sem', value: '2' } });
+	wrapper26.find('[data-testid="submitbutton"]').at(0).simulate('click');
 	// var data=1
 	// expect(data).toBe(1)
-	expect(wrapper.state().errors['sem']).toBe('');
+	expect(wrapper26.state().errors['sem']).toBe('');
 });
