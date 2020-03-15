@@ -25,6 +25,7 @@ it('validates inputs of faculty', () => {
 	// expect(data).toBe(1)
 	expect(wrapper.state().errors['fid']).toBe('');
 });
+
 it('validates inputs of faculty time table-sem', () => {
 	var wrapper = shallow(<Facultytimetable />);
 	wrapper.find('[name="sem"]').at(0).simulate('change', { target: { name: 'sem', value: ' ' } });
