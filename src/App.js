@@ -54,7 +54,7 @@ class App extends Component {
 						{this.state.fid}
 					</h4>
 					<h2 class="badge badge-success" style={{ marginRight: '1%', marginTop: '1%', display: 'inline' }}>
-						Time :<Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />
+						Time :<Clock format={'HH:mm:ss'} ticking={true} timezone={'Asia/Calcutta'} />
 						{'   '}
 					</h2>
 					<br />

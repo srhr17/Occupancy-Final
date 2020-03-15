@@ -15,7 +15,7 @@ class roomfeatures extends Component {
 		return (
 			<div class="stars">
 				<h2 class="badge badge-success" style={{ marginLeft: '90%', marginTop: '1%', display: 'inline' }}>
-					Time :<Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />
+					Time :<Clock format={'HH:mm:ss'} ticking={true} timezone={'Asia/Calcutta'} />
 					{'   '}
 				</h2>
 				<br />
