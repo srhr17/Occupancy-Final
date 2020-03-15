@@ -31,8 +31,7 @@ class App extends Component {
 
 	initial = () => {
 		let value = this;
-		sessionStorage.setItem('fid', 400);
-		sessionStorage.setItem('fname', 'Aghilan');
+	
 
 		value.setState({ facultyname: sessionStorage.getItem('fname') });
 		value.setState({ fid: sessionStorage.getItem('fid') });
