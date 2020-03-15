@@ -21,8 +21,11 @@ import {
 class Signup extends Component{
   state = { id: "", password: "", usertype: 0 ,fname: "",errors: {
     id: " ",
-    password: " "
+    password:callpassword()
   }};
+callpassword(){
+ return " ";   
+};
   validateForm = errors => {
     let valid = true;
     Object.values(errors).forEach(val => val.length > 0 && (valid = false));

@@ -13,9 +13,13 @@ import {
 class forgotpassword extends Component {
     state = { id: "", password: "",new_password: "",errors: {
         id: " ",
-        password: " ",
-        new_password:" "
+        password: callpassword(),
+        new_password:callpassword()
       }};
+callpassword()
+{
+  return " ";
+};
       validateForm = errors => {
         let valid = true;
         Object.values(errors).forEach(val => val.length > 0 && (valid = false));
