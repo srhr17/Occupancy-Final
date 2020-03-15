@@ -9,12 +9,12 @@ import {
     Button
   } from "reactstrap";
   import  { Component } from "react";
-  import './css/style-green.css'
-  import './css/style-orange.css'
-  import './css/style-purple.css'
-  import './css/style-red.css'
-  import './css/style-sky-blue.css'
-  import './css/style.css'
+//  import './css/style-green.css'
+//  import './css/style-orange.css'
+//  import './css/style-purple.css'
+//  import './css/style-red.css'
+//  import './css/style-sky-blue.css'
+//  import './css/style.css'
 
 class contactus extends Component {
     state = { email: "", name: "", usertype: " ",comment: ""};
