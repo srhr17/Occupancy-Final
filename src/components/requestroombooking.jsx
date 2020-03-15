@@ -86,7 +86,9 @@ class requestroombooking extends Component {
 					<br />
 					<div id="yess" class="input-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text">Time</span>
+							<span id="fort" class="input-group-text">
+								Time of Class
+							</span>
 						</div>
 
 						<select name="time" class="form-control" id="timey">
@@ -102,7 +104,7 @@ class requestroombooking extends Component {
 						</select>
 					</div>
 					<br />
-					<br />
+
 					<br />
 					<button type="submit" data-testid="submitbutton" class="btn btn-dark" style={{ marginLeft: '40%' }}>
 						Submit
