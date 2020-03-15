@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import './SCSS.css';
+import Clock from 'react-live-clock';
 import { BrowserRouter as Router, NavLink } from 'react-router-dom';
 class roomfeatures extends Component {
 	constructor(props) {
@@ -12,7 +13,12 @@ class roomfeatures extends Component {
 	};
 	render() {
 		return (
-			<div style={{ marginTop: '5%' }}>
+			<div class="stars">
+				<h2 class="badge badge-success" style={{ marginLeft: '90%', marginTop: '1%', display: 'inline' }}>
+					Time :<Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />
+					{'   '}
+				</h2>
+				<br />
 				<form
 					method="POST"
 					action="http://localhost:8000/roomfeat"
