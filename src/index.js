@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import studentlogin from './Appstudent';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -11,21 +12,81 @@ import Roomtimetable from './components/Roomtimetable.jsx';
 import Freeslotfaculty from './components/freeslotfaculty.jsx';
 import Roomfeat from './components/roomfeatures.jsx';
 import Cancelclass from './components/cancelclass.jsx';
+import Signup from './loginpage.jsx';
 import 'mdbreact/dist/css/mdb.css';
 import './login.css';
 import Requestroombooking from './components/requestroombooking.jsx';
 
+import forgotpassword from './forgotpassword';
+
+import studentfeat from './studentfeat';
+import studentfacu from './studentfac.js';
+import studenttimetable from './Studenttimetable.js';
+import studentroomwise from './studentroomwise.js';
+import studentfree from './studentfree';
+import Viewcancelclass from './viewcancelclass';
+
+
+import Time from './display.jsx';
+import Login from './login.jsx';
+
+
+import Studentlogin from './Appstudent.js';
+
+import support from './support.js';
+import faqs from './faqs.jsx';
+
+import Feature from './feat.js';
+
+import Room from './Room.js';
+import adminlogin from './adminapp.js';
+import Booking from './booking.js';
+import Student from './stud.js';
+import Adminfaculty from './fac.js';
 ReactDOM.render(
 	<React.Fragment>
 		<Router>
 			<Switch>
-				<Route exact path="/" component={App} />
+            <Route exact path="/" component={Signup} />
+        	<Route exact path="/login" component={Login} />
+        	<Route exact path="/display" component={Time} />
+				<Route exact path="/studentlogin" component={Studentlogin} />
+    
+				<Route exact path="/stud" component={Student} />
+				<Route exact path="/rooms" component={Room} />
+				<Route exact path="/fac" component={Adminfaculty} /> 
+    <Route exact path="/feat" component={Feature} />
+    	<Route exact path="/booking" component={Booking} />
+    
+    
+    
+    <Route exact path="/support" component={support} />
+			<Route exact path="/faqs" component={faqs} />
+        	
+    
+    
+    
+    
+				<Route exact path="/faculty" component={App} />
 				<Route exact path="/facultytimetable" component={Facultytimetable} />
 				<Route exact path="/roomtimetable" component={Roomtimetable} />
 				<Route exact path="/freeslotfaculty" component={Freeslotfaculty} />
 				<Route exact path="/cancelclass" component={Cancelclass} />
 				<Route exact path="/roomfeat" component={Roomfeat} />
-				<Route exact path="/requestroombooking" component={Requestroombooking} />
+				<Route exact path="/requestroombooking" component={Requestroombooking}/>
+    
+    
+                <Route exact path="/Studenttimetable" component={studenttimetable} />
+				<Route exact path="/studentroomwise" component={studentroomwise} />
+                <Route exact path="/studentfree" component={studentfree} />
+                <Route exact path="/studentfacu" component={studentfacu} />
+				<Route exact path="/studentfeat" component={studentfeat} />
+				<Route exact path="/viewcancel" component={Viewcancelclass} />
+                <Route exact path="/studentlogin" component={studentlogin} />
+    	<Route exact path="/forgotpassword" component={forgotpassword} />
+     <Route component={adminlogin} />
+    <Route component={Studentlogin} />
+    
 				<Route component={App} />
 			</Switch>
 		</Router>

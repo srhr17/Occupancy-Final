@@ -1,0 +1,86 @@
+<table class="table table-striped table-primary" style="width:100%;background-color:powderblue;">
+    <style> 
+      table, th, td { 
+          border: 1px solid black; 
+      } 
+  </style> 
+  
+   <center>   <h1>Room Features</h1></center> 
+   <br/><thead>
+        <tr>
+          <th  style="background-color:yellow;"><h2>ROOM NO</h2></th><th></th>
+       
+          <th  style="background-color:yellow;"><h2>PROJECTOR</h2></th><th></th>
+       <th  style="background-color:yellow;"><h2>AC</h2></th><th></th>
+       
+       <th  style="background-color:yellow;"><h2>SOCKET PER EACH BENCH</h2></th><th></th>
+          <th  style="background-color:yellow;"><h2>SOUND BOX</h2></th><th></th>
+    
+          <th  style="background-color:yellow;"><h2>MARKER BOARD</h2></th><th></th>
+          <th  style="background-color:yellow;"><h2>MIC</h2></th><th></th>
+        
+         
+        </tr>
+      </thead>
+  
+  
+      <tbody>
+  
+        <%if (records.length >0){ %>
+        <% records.forEach(function(row){ %>
+    
+      <br/>
+      <br/>
+       <tr><center>
+        <%if (row.projector=="NO"){%>
+             
+          <td style="background-color:green"><center><%= row.roomno %></center></td><th></th> <%}
+        else{%><td><center><%= row.roomno %></center></td><th></th> <%}
+        %>
+          
+              <%if (row.projector=="NO"){%>
+             
+                <td style="background-color:green"><center><%= row.projector %></center></td><th></th> <%}
+              else{%><td><center><%= row.projector %></center></td><th></th> <%}
+                %>
+                <%if (row.ac=="NO"){%>
+             
+                  <td style="background-color:green"><center><%= row.ac %></center></td><th></th> <%}
+                else{%><td><center><%= row.ac %></center></td><th></th> <%}
+                  %>
+                  <%if (row.skt=="NO"){%>
+             
+                    <td style="background-color:green"><center><%= row.skt %></center></td><th></th> <%}
+                  else{%><td><center><%= row.skt %></center></td><th></th> <%}
+                    %>
+                    <%if (row.sb=="NO"){%>
+             
+                      <td style="background-color:green"><center><%= row.sb %></center></td><th></th> <%}
+                    else{%><td><center><%= row.sb %></center></td><th></th> <%}
+                      %>
+                      <%if (row.mb=="NO"){%>
+             
+                        <td style="background-color:green"><center><%= row.mb %></center></td><th></th> <%}
+                      else{%><td><center><%= row.mb %></center></td><th></th> <%}
+                        %>
+                        <%if (row.mic=="NO"){%>
+             
+                          <td style="background-color:green"><center><%= row.mic %></center></td><th></th> <%}
+                        else{%><td><center><%= row.mic %></center></td><th></th> <%}
+                          %>
+                       
+                            
+              
+    <tr></tr>
+        </center>
+        </tr>
+      
+        <% })}else{ %>
+          <tr>
+              <td colspan="10">No Record Found</td>
+              
+            </tr>
+          <% } %>
+      
+      </tbody>
+    </table>
