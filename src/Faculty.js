@@ -4,96 +4,30 @@ import React from "react";
 //import css from './css.css';
 class Faculty extends React.Component {
 constructor(props){
-    super(props);
+  super(props);
     this.state={
         
-      fid0:"",sem0:"",
-      
-       errors: {
-          fid0:"",
-          sem0:""
-       },
+    
    
+      fields1: {},
+      errors1: {},
      fields2: {},
      errors2: {},
  
 
      fields3: {},
    
-     errors3: {}
+     errors3: {},
 
     };
 }
    
-handleChange1 = e => {
-  const { name, value } = e.target;
-  let errors = this.state.errors;
-  switch (name) {
-    
-    case "fid0":
-      errors.sec0 = value === " " ? "Select faculty name" : "";
-      break;
-
-    case "sem0":
-      errors.sem0 = value === " " ? "Select sem" : "";
-      break;
-    
-      
-
-    default:
-      break;
-  }
-
-  this.setState({ errors, [name]: value });
+handleChange1 (field,e){
+  
+  let fields1 = this.state.fields1;
+    fields1[field] = e.target.value;        
+    this.setState({fields1});
 };
-    handleValidation2(){
-        let fields2 = this.state.fields2;
-        let errors2 = {};
-        let formIsValid2 = true;
-        if(!fields2["fid1"]){
-           formIsValid2 = false;
-           errors2["fid1"] = "Cannot be empty";
-        }
-    
-        
-        if(!fields2["y1"]){
-            formIsValid2 = false;
-            errors2["y1"] = "Cannot be empty";
-         }
-    
-         if(!fields2["day1"]){
-            formIsValid2 = false;
-            errors2["day1"] = "Cannot be empty";
-         }
-         
-         if(!fields2["fn1"]){
-            formIsValid2 = false;
-            errors2["fn1"] = "Cannot be empty";
-         }
-          
-          
-         if(!fields2["fh1"] || !fields2["sh1"]|| !fields2["th1"]|| !fields2["foh1"]|| !fields2["fih1"]
-         || !fields2["sih1"]|| !fields2["seh1"]|| !fields2["eh1"]|| !fields2["nh1"]){
-             formIsValid2 = false;
-             alert("Please enter all class hours details");
-          }
-    
-       this.setState({errors2: errors2});
-       return formIsValid2;
-    }
-    
-    
-    contactSubmit2(e){
-    
-        if(this.handleValidation2()){
-           alert("Form submitted");
-        }else{
-           alert("Form has errors.");
-    e.preventDefault();
-
-        }
-    
-    }
 
 handleChange2(field, e){         
     let fields2 = this.state.fields2;
@@ -101,58 +35,8 @@ handleChange2(field, e){
     this.setState({fields2});
 }
 
-handleValidation3(){
-    let fields3 = this.state.fields3;
-    let errors3 = {};
-    let formIsValid3 = true;
-
-    //Name
-    if(!fields3["sem2"]){
-       formIsValid3 = false;
-       errors3["sem2"] = "Cannot be empty";
-    }
-
-    
-
-    if(!fields3["fid2"]){
-       formIsValid3 = false;
-       errors3["fid2"] = "Cannot be empty";
-    }
-     if(!fields3["day2"]){
-      formIsValid3 = false;
-      errors3["day2"] = "Cannot be empty";
-   }
-
-    if(!fields3["y2"]){
-        formIsValid3 = false;
-        errors3["y2"] = "Cannot be empty";
-     }
-
-     if(!fields3["fh2"] || !fields3["sh2"]|| !fields3["th2"]|| !fields3["foh2"]|| !fields3["fih2"]
-     || !fields3["sih2"]|| !fields3["seh2"]|| !fields3["eh2"]|| !fields3["nh2"]){
-         formIsValid3 = false;
-         alert("Please enter all class hours details");
-      }
 
 
-
-
-   this.setState({errors3: errors3});
-   return formIsValid3;
-}
-
-
-contactSubmit3(e){
-
-    if(this.handleValidation3()){
-       alert("Form submitted");
-    }else{
-       alert("Form has errors.");
-       
-    e.preventDefault();
-    }
-
-}
 
 
 handleChange3(field, e){         
@@ -165,20 +49,19 @@ handleChange3(field, e){
         <div class="form">
             <table>
                 <tr>
-        <div className="container4"><fieldset>
+        <div className="container1"><fieldset>
       <form action="http://localhost:8000/VIEW" method="post">
         
           <legend>
             <span className="number">1</span> VIEW FACULTY TIMETABLE
           </legend><br></br>
           Faculty Name *:
-          <input type="text" name="fid0" placeholder="Faculty id *" onChange={this.handleChange1}/>
-          <span style={{color: "red"}}>{this.state.errors["fid0"]}</span> <br/>
+          <input type="text" name="fid0" placeholder="Faculty id *" onChange={this.handleChange1.bind(this,"fid0")}/>
                    
          
                    
           Sem *:
-          <select id="lang" name="sem0" onChange={this.handleChange1}  style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}}>
+          <select id="lang" name="s1" onChange={this.handleChange1.bind(this,"s1")}  style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}}>
           <option value="select">Select a SEM</option>
          
           <option value ="1">1</option>
@@ -191,10 +74,9 @@ handleChange3(field, e){
           <option value ="8">8</option>
           
         </select><br/>
-          <span style={{color: "red"}}>{this.state.errors["sem0"]}</span> <br/>
                    
-          <button style={{borderRadius: '50px', width: '300px',backgroundColor:' rgb(107, 180, 107)'} } data-testid = "submitbutton" onClick="">VIEW</button>
-     
+         
+        <input type="submit" Value="VIEW" />
        
       </form> </fieldset>
       </div>
@@ -208,14 +90,12 @@ handleChange3(field, e){
           </legend><br></br>
           Faculty Id *:
           <input type="text" name="fid1" placeholder="Faculty id *" onChange={this.handleChange2.bind(this, "fid1")}/>
-          <span style={{color: "red"}}>{this.state.errors2["fid1"]}</span> <br/>
           Faculty Name*:
           <input type="text" name="fn1" placeholder="Faculty name *" onChange={this.handleChange2.bind(this, "fn1")}/>
-          <span style={{color: "red"}}>{this.state.errors2["fn1"]}</span> <br/>
           
           Year *:
           
-          <select id="lang" name="y1" onChange={this.handleChange2.bind(this, "y1")} style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}} >
+          <select id="lang" name="year1" onChange={this.handleChange2.bind(this, "year1")} style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}} >
           <option value="select">Select a YEAR</option>
           
           <option value ="2019">2019</option>
@@ -224,9 +104,8 @@ handleChange3(field, e){
           
         </select><br/>
           
-          <span style={{color: "red"}}>{this.state.errors2["y1"]}</span> <br/>
           Sem *:
-          <select id="lang" name="sem1" onChange={this.handleChange2.bind(this, "sem1")}  style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}}>
+          <select id="lang" name="s2" onChange={this.handleChange2.bind(this, "s2")}  style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}}>
           <option value="select">Select a SEM</option>
           <option value ="1">1</option>
           <option value ="2">2</option>
@@ -238,10 +117,9 @@ handleChange3(field, e){
           <option value ="8">8</option>
           
         </select><br/>
-          <span style={{color: "red"}}>{this.state.errors2["sem1"]}</span> <br/>
           Day *:
          
-          <select id="lang" name="day1" onChange={this.handleChange2.bind(this, "day1")} style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}} >
+          <select id="lang" name="d1" onChange={this.handleChange2.bind(this, "d1")} style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}} >
           <option value="select">Select a DAY</option>
           
           <option value ="Monday">Monday</option>
@@ -253,27 +131,26 @@ handleChange3(field, e){
           
         </select><br/>
          
-          <span style={{color: "red"}}>{this.state.errors2["day1"]}</span> <br/>
           
           <h4>Enter Time Table</h4>
           First Hour *:
-          <input type="text" name="fh1" placeholder="First Hour *" onChange={this.handleChange2.bind(this, "fh1")}/>
+          <input type="text" name="first1" placeholder="First Hour *" onChange={this.handleChange2.bind(this, "first1")}/>
           Second Hour *:
-          <input type="text" name="sh1" placeholder="Second Hour *" onChange={this.handleChange2.bind(this, "sh1")}/>
+          <input type="text" name="second1" placeholder="Second Hour *" onChange={this.handleChange2.bind(this, "second1")}/>
           Third Hour *:
-          <input type="text" name="th1" placeholder="Third Hour *" onChange={this.handleChange2.bind(this, "th1")}/>
+          <input type="text" name="third1" placeholder="Third Hour *" onChange={this.handleChange2.bind(this, "third1")}/>
           Fourth Hour *:
-          <input type="text" name="foh1" placeholder="Fourth Hour *"onChange={this.handleChange2.bind(this, "foh1")} />
+          <input type="text" name="fourth1" placeholder="Fourth Hour *"onChange={this.handleChange2.bind(this, "fourth1")} />
           Fifth Hour *:
-          <input type="text" name="fih1" placeholder="Fifth Hour *" onChange={this.handleChange2.bind(this, "fih1")}/>
+          <input type="text" name="fifth1" placeholder="Fifth Hour *" onChange={this.handleChange2.bind(this, "fifth1")}/>
           Sixth Hour *:
-          <input type="text" name="sih1" placeholder="Sixth Hour *" onChange={this.handleChange2.bind(this, "sih1")}/>
+          <input type="text" name="sixth1" placeholder="Sixth Hour *" onChange={this.handleChange2.bind(this, "sixth1")}/>
           Seventh Hour *:
-          <input type="text" name="seh1" placeholder="Seventh Hour *" onChange={this.handleChange2.bind(this, "seh1")}/>
+          <input type="text" name="seventh1" placeholder="Seventh Hour *" onChange={this.handleChange2.bind(this, "seventh1")}/>
           Eighth Hour *:
-          <input type="text" name="eh1" placeholder="Eight Hour *" onChange={this.handleChange2.bind(this, "eh1")}/>
+          <input type="text" name="eigth1" placeholder="Eight Hour *" onChange={this.handleChange2.bind(this, "eigthh1")}/>
           Ninth Hour *:
-          <input type="text" name="nh1" placeholder="Nine Hour *" onChange={this.handleChange2.bind(this, "nh1")}/>
+          <input type="text" name="nineth1" placeholder="Nine Hour *" onChange={this.handleChange2.bind(this, "nineth1")}/>
     
         <input type="submit" Value="INSERT" />
       </form>    </fieldset>
@@ -289,10 +166,9 @@ handleChange3(field, e){
           </legend><br></br>
           Faculty Name *:
           <input type="text" name="fid2" placeholder="Faculty id *" onChange={this.handleChange3.bind(this, "fid2")}/>
-          <span style={{color: "red"}}>{this.state.errors2["fid2"]}</span> <br/>
-   
+         
           Year *:
-          <select id="lang" name="y2" onChange={this.handleChange3.bind(this, "y2")} style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}}>
+          <select id="lang" name="year2" onChange={this.handleChange3.bind(this, "year2")} style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}}>
           <option value="select">Select a YEAR</option>
           
           <option value ="2019">2019</option>
@@ -300,11 +176,9 @@ handleChange3(field, e){
          
           
         </select><br/>
-		
-          <span style={{color: "red"}}>{this.state.errors2["y2"]}</span> <br/>
          
           Sem *:
-          <select id="lang" name="sem2" onChange={this.handleChange3.bind(this, "sem2")}style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}} >
+          <select id="lang" name="s3" onChange={this.handleChange3.bind(this, "s3")}style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}} >
           <option value ="1">1</option>
           <option value ="2">2</option>
           <option value ="3">3</option>
@@ -315,11 +189,10 @@ handleChange3(field, e){
           <option value ="8">8</option>
         </select><br/>
     
-          <span style={{color: "red"}}>{this.state.errors2["sem2"]}</span> <br/>
          
           Day *:
          
-          <select id="lang" name="day2" onChange={this.handleChange3.bind(this, "day2")}style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}} >
+          <select id="lang" name="d2" onChange={this.handleChange3.bind(this, "d2")}style={{borderRadius:'4px',width:'100%',backgroundColor:'rgb(158, 151, 151)'}} >
           <option value="select">Select a DAY</option>
        
           <option value ="Monday">Monday</option>
@@ -331,27 +204,26 @@ handleChange3(field, e){
           
         </select><br/>
          
-         <span style={{color: "red"}}>{this.state.errors3["day2"]}</span> <br/>
           
           <h4>Enter Time Table</h4>
           First Hour *:
-          <input type="text" name="fh2" placeholder="First Hour *" onChange={this.handleChange3.bind(this, "fh2")} />
+          <input type="text" name="first2" placeholder="First Hour *" onChange={this.handleChange3.bind(this, "first2")} />
           Second Hour *:
-          <input type="text" name="sh2" placeholder="Second Hour *" onChange={this.handleChange3.bind(this, "sh2")} />
+          <input type="text" name="second2" placeholder="Second Hour *" onChange={this.handleChange3.bind(this, "second2")} />
           Third Hour *:
-          <input type="text" name="th2" placeholder="Third Hour *" onChange={this.handleChange3.bind(this, "th2")} />
+          <input type="text" name="third2" placeholder="Third Hour *" onChange={this.handleChange3.bind(this, "third2")} />
           Fourth Hour *:
-          <input type="text" name="foh2" placeholder="Fourth Hour *" onChange={this.handleChange3.bind(this, "foh2")} />
+          <input type="text" name="fourth2" placeholder="Fourth Hour *" onChange={this.handleChange3.bind(this, "fourth2")} />
           Fifth Hour *:
-          <input type="text" name="fih2" placeholder="Fifth Hour *" onChange={this.handleChange3.bind(this, "fih2")} />
+          <input type="text" name="fifth2" placeholder="Fifth Hour *" onChange={this.handleChange3.bind(this, "fifth2")} />
           Sixth Hour *:
-          <input type="text" name="sih2" placeholder="Sixth Hour *" onChange={this.handleChange3.bind(this, "sih2")} />
+          <input type="text" name="sixth2" placeholder="Sixth Hour *" onChange={this.handleChange3.bind(this, "sixth2")} />
           Seventh Hour *:
-          <input type="text" name="seh2" placeholder="Seventh Hour *" onChange={this.handleChange3.bind(this, "seh0")} />
+          <input type="text" name="seventh2" placeholder="Seventh Hour *" onChange={this.handleChange3.bind(this, "seventh2")} />
           Eighth Hour *:
-          <input type="text" name="eh2" placeholder="Eight Hour *" onChange={this.handleChange3.bind(this, "eh2")} />
+          <input type="text" name="eigth2" placeholder="Eight Hour *" onChange={this.handleChange3.bind(this, "eigth2")} />
           Ninth Hour *:
-          <input type="text" name="nh2" placeholder="Nine Hour *" onChange={this.handleChange3.bind(this, "nh2")} />
+          <input type="text" name="nineth2" placeholder="Nine Hour *" onChange={this.handleChange3.bind(this, "nineth2")} />
        
         <input type="submit" Value="MODIFY" />
       </form> </fieldset>
