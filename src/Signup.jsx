@@ -122,7 +122,7 @@ class Signup extends Component {
 							<MDBRow md="6">
 								<MDBCol md="6">
 									<MDBCard
-										className="card-image"
+										className="card-image m-5"
 										style={{
 											backgroundImage:
 												'url(https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg)',
