@@ -30,7 +30,7 @@ class cancelclass extends Component {
 						</h1>
 					</MDBAnimation>
 					<h2 class="badge badge-success" style={{ marginLeft: '90%', marginTop: '1%', display: 'inline' }}>
-						Time :<Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />
+						Time :<Clock format={'HH:mm:ss'} ticking={true} timezone={'Asia/Calcutta'} />
 						{'   '}
 					</h2>
 					<br />
