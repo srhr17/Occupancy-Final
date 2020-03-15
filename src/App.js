@@ -5,6 +5,7 @@ import { MDBAnimation } from 'mdbreact';
 import Clock from 'react-live-clock';
 import './components/SCSS.css';
 import Logout from './components/logout.jsx';
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -34,7 +35,6 @@ class App extends Component {
 
 	initial = () => {
 		let value = this;
-	
 
 		value.setState({ facultyname: sessionStorage.getItem('fname') });
 		value.setState({ fid: sessionStorage.getItem('fid') });
@@ -80,6 +80,8 @@ class App extends Component {
 						/> */}
 					</MDBAnimation>
 					<br />
+					<br />
+
 					<br />
 					<br />
 					<Router>
