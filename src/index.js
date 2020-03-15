@@ -27,7 +27,7 @@ import studentfree from './studentfree';
 import Viewcancelclass from './viewcancelclass';
 
 import Time from './TIme.jsx';
-import Login from './Login.jsx';
+import Login from './login.jsx';
 
 import Studentlogin from './studentlogin.js';
 
