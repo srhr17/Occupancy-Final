@@ -6,17 +6,12 @@ import "mdbreact/dist/css/mdb.css";
 import {
   BrowserRouter as Router,
   Link,
-  NavLink,
-  Redirect
+  NavLink
 } from "react-router-dom";
 import {
-  Container,
+
   Col,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Button
+  Form
 } from "reactstrap";
 class Signup extends Component{
   state = { id: "", password: "", usertype: 0 ,fname: "",errors: {
@@ -25,7 +20,7 @@ class Signup extends Component{
   }};
 callpassword(){
  return " ";   
-};
+}
   validateForm = errors => {
     let valid = true;
     Object.values(errors).forEach(val => val.length > 0 && (valid = false));
@@ -321,5 +316,5 @@ callpassword(){
  
      );
    }
-  };
+  }
 export default Signup;

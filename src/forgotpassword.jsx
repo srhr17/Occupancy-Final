@@ -3,12 +3,12 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, M
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import {
-  BrowserRouter as Router,
-  Link,
-  NavLink,
-  Redirect
-} from "react-router-dom";
+//import {
+//  BrowserRouter as Router,
+//  Link,
+//  NavLink,
+// 
+//} from "react-router-dom";
 
 class forgotpassword extends Component {
     state = { id: "", password: "",new_password: "",errors: {
@@ -19,7 +19,7 @@ class forgotpassword extends Component {
 callpassword()
 {
   return " ";
-};
+}
       validateForm = errors => {
         let valid = true;
         Object.values(errors).forEach(val => val.length > 0 && (valid = false));
