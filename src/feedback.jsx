@@ -38,7 +38,7 @@ class feedback extends Component {
 //    var value=this;
     var formdata= new FormData(document.getElementById("custrm"));
     var data= new URLSearchParams();
-    var ft=0
+   // var ft=0
     for (var pair of formdata) {
       data.append(pair[0], pair[1])
     }

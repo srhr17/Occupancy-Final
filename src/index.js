@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import studentlogin from './Appstudent';
+import studentlogin from './studentlogin';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -27,7 +27,7 @@ import studentfree from './studentfree';
 import Viewcancelclass from './viewcancelclass';
 
 
-import Time from './display.jsx';
+import Time from './Time.jsx';
 import Login from './login.jsx';
 
 
@@ -42,7 +42,7 @@ import Room from './Room.js';
 import adminlogin from './adminapp.js';
 import Booking from './booking.js';
 import Student from './stud.js';
-import Adminfaculty from './fac.js';
+import Faculty from './Faculty.js';
 import feedback from './feedback.jsx';
 ReactDOM.render(
 	<React.Fragment>
@@ -55,7 +55,7 @@ ReactDOM.render(
     
 				<Route exact path="/stud" component={Student} />
 				<Route exact path="/rooms" component={Room} />
-				<Route exact path="/fac" component={Adminfaculty} /> 
+				<Route exact path="/fac" component={Faculty} /> 
     <Route exact path="/feat" component={Feature} />
     	<Route exact path="/booking" component={Booking} />
     
