@@ -1,11 +1,11 @@
-const expressi = require('express');
-const appi = expressi();
+const express = require('express');
+const app = express();
 const port = 8000;
 const mysql = require('mysql');
 var bodyParser = require('body-parser');
-appi.set('view engine', 'ejs');
-appi.use(bodyParser.urlencoded({ extended: false }));
-appi.use(bodyParser.json());
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 function loadpassword() {
 	return 'occupancy';
 }
@@ -21,7 +21,7 @@ sqlConnection.connect((err) => {
 	else console.log('Unsuccessful \n Error : ' + JSON.stringify(err, undefined, 2));
 });
 
-appi.post('/mytimetable', function(req, res) {
+app.post('/mytimetable', function(req, res) {
 	var fid = req.body.fid;
 	var sem = req.body.sem;
 
@@ -61,7 +61,7 @@ appi.post('/mytimetable', function(req, res) {
 	);
 });
 
-appi.post('/roomfeat', function(req, res) {
+app.post('/roomfeat', function(req, res) {
 	var prj = req.body.projector;
 	var skt = req.body.socket;
 	var ac = req.body.ac;
@@ -91,7 +91,7 @@ appi.post('/roomfeat', function(req, res) {
 	);
 });
 
-appi.post('/cancelclass', function(req, res) {
+app.post('/cancelclass', function(req, res) {
 	var sem = req.body.sem;
 	var classi = req.body.class;
 	var day = req.body.day;
@@ -115,7 +115,7 @@ appi.post('/cancelclass', function(req, res) {
 	);
 });
 
-appi.post('/reqroombooking', function(req, res) {
+app.post('/reqroombooking', function(req, res) {
 	var roomno = req.body.roomno;
 	var day = req.body.day;
 	var time = req.body.time;
@@ -156,7 +156,7 @@ appi.post('/reqroombooking', function(req, res) {
 	});
 });
 
-appi.post('/roomtimetable', function(req, res) {
+app.post('/roomtimetable', function(req, res) {
 	var room = req.body.roomno;
 	res.writeHead(200, { 'content-type': 'text/html' });
 	sqlConnection.query(
@@ -204,7 +204,7 @@ function checkfree(period, pno) {
 		return str;
 	}
 }
-appi.post('/freeslotsfaculty', function(req, res) {
+app.post('/freeslotsfaculty', function(req, res) {
 	var fid = req.body.fid;
 	var sem = req.body.sem;
 	console.log(fid + ' hola2 ' + sem);
@@ -236,4 +236,4 @@ appi.post('/freeslotsfaculty', function(req, res) {
 	);
 	console.log('hola2');
 });
-appi.listen(port, () => console.log(`Example appi listening on port port!`));
+app.listen(port, () => console.log(`Example app listening on port port!`));
