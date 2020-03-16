@@ -113,7 +113,6 @@ class requestroombooking extends Component {
 						Submit
 					</button>
 				</form>
-
 				<Logout />
 			</div>
 		);
