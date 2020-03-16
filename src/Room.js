@@ -2,51 +2,51 @@
 import React from 'react';
 //import css from "./css.css";
 class Room extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			r1: '',
-			y0: '',
-			sem0: '',
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+	// 		r1: '',
+	// 		y0: '',
+	// 		sem0: '',
 
-			errors: {
-				r1: '',
-				y0: '',
-				sem0: ''
-			},
+	// 		errors: {
+	// 			r1: '',
+	// 			y0: '',
+	// 			sem0: ''
+	// 		},
 
-			fields2: {},
+	// 		fields2: {},
 
-			errors2: {},
+	// 		errors2: {},
 
-			fields3: {},
+	// 		fields3: {},
 
-			errors3: {}
-		};
-	}
+	// 		errors3: {}
+	// 	};
+	// }
 
-	handleChange1 = (e) => {
-		const { name, value } = e.target;
-		let errors = this.state.errors;
-		switch (name) {
-			case 'r1':
-				errors.r1 = value === ' ' ? 'Select room' : '';
-				break;
+	// handleChange1 = (e) => {
+	// 	const { name, value } = e.target;
+	// 	let errors = this.state.errors;
+	// 	switch (name) {
+	// 		case 'r1':
+	// 			errors.r1 = value === ' ' ? 'Select room' : '';
+	// 			break;
 
-			case 'y0':
-				errors.y0 = value === ' ' ? 'Select year' : '';
-				break;
+	// 		case 'y0':
+	// 			errors.y0 = value === ' ' ? 'Select year' : '';
+	// 			break;
 
-			case 'sem0':
-				errors.sem0 = value === ' ' ? 'Select sem' : '';
-				break;
+	// 		case 'sem0':
+	// 			errors.sem0 = value === ' ' ? 'Select sem' : '';
+	// 			break;
 
-			default:
-				break;
-		}
+	// 		default:
+	// 			break;
+	// 	}
 
-		this.setState({ errors, [name]: value });
-	};
+	// 	this.setState({ errors, [name]: value });
+	// };
 
 	// handleValidation2(){
 	//     let fields2 = this.state.fields2;
