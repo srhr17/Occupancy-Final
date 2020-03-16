@@ -2,6 +2,7 @@ import React from 'react';
 import './login.css';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBInput } from 'mdbreact';
 import { Component } from 'react';
+import './components/SCSS.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
@@ -111,8 +112,8 @@ class Login extends Component {
 	};
 	render() {
 		return (
-			<html style={{}}>
-				<body class="wrapper">
+			<html class="stars">
+				<body>
 					<Form id="custrm">
 						<MDBContainer>
 							<MDBRow>
