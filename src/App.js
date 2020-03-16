@@ -87,27 +87,46 @@ class App extends Component {
 					<Router>
 						<ul class="breadcrumb navbar navbar-inverse bg-dark navbar-dark">
 							<li>
-								<NavLink to="/facultytimetable" name="mytimetable" onClick={this.facultytimetable}>
+								<NavLink
+									to="/facultytimetable"
+									id="mytimetable"
+									name="mytimetable"
+									onClick={this.facultytimetable}
+								>
 									My Timetable
 								</NavLink>
 							</li>
 							<li class="active">
-								<NavLink to="/roomtimetable" name="roomtimetable" onClick={this.roomtimetable}>
+								<NavLink
+									to="/roomtimetable"
+									name="roomtimetable"
+									id="roomtimetable"
+									onClick={this.roomtimetable}
+								>
 									Room Timetable
 								</NavLink>
 							</li>
 							<li>
-								<NavLink to="/freeslotfaculty" name="freeslots" onClick={this.freeslotfaculty}>
+								<NavLink
+									to="/freeslotfaculty"
+									id="freeslots"
+									name="freeslots"
+									onClick={this.freeslotfaculty}
+								>
 									My Free Slots{' '}
 								</NavLink>
 							</li>
 							<li>
-								<NavLink to="/requestroombooking" onClick={this.requestroombooking}>
+								<NavLink
+									to="/requestroombooking"
+									id="requestroombooking"
+									onClick={this.requestroombooking}
+								>
 									Room Booking
 								</NavLink>
 							</li>
 							<li>
-								<NavLink to="/cancelclass" onClick={this.cancelclass}>
+								<NavLink to="/cancelclass" id="cancelclass" onClick={this.cancelclass}>
 									Cancel Class
 								</NavLink>
 							</li>
