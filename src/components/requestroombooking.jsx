@@ -41,7 +41,7 @@ class requestroombooking extends Component {
 				<Router>
 					<ul class="breadcrumb navbar navbar-inverse bg-dark navbar-dark">
 						<li style={{ marginLeft: '48%' }}>
-							<NavLink to="/roomfeat" name="roomfeat" onClick={this.roomfeat}>
+							<NavLink to="/roomfeat" name="roomfeat" id="roomfeat" onClick={this.roomfeat}>
 								See Room Features
 							</NavLink>
 						</li>
