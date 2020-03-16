@@ -26,7 +26,7 @@ jobs:
       run: |
         echo Start UI test engine
         echo Running the javascript file
-    - name: UI Testing Start
+    - name: UI Testing Successfull
       run: |
         echo UI testing Done
         echo E2E testing Successfull.
