@@ -1,5 +1,5 @@
 import React from 'react';
-import './login.css';
+
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBInput } from 'mdbreact';
 import { Component } from 'react';
 import './components/SCSS.css';
