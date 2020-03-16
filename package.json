@@ -30,16 +30,8 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
+		"production": [ ">0.2%", "not dead", "not op_mini all" ],
+		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
 	},
 	"devDependencies": {
 		"@testing-library/react": "^9.4.0",
@@ -52,16 +44,8 @@
 		"react-test-renderer": "^16.12.0"
 	},
 	"jest": {
-		"collectCoverageFrom": [
-			"src//*.{js,jsx}",
-			"!/node_modules/",
-			"!build/",
-			"!src/serviceWorker.js"
-		],
-		"coverageReporters": [
-			"lcov",
-			"text"
-		]
+		"collectCoverageFrom": [ "src//*.{js,jsx}", "!/node_modules/", "!build/", "!src/serviceWorker.js" ],
+		"coverageReporters": [ "json", "html" ]
 	},
 	"jest-junit": {
 		"output": "test-results/test-report.junit.xml"
