@@ -18,42 +18,41 @@ class Studenttimetable extends React.Component {
 		super();
 		this.state = {
 			section: '',
-			sem: ''
-			//  ,
+			sem: '' ,
 
-			//  errors: {
+			  errors: {
 
-			//    section: " ",
-			//   sem: " "
-			//  }
+			    section: " ",
+			  sem: " "
+			  }
 		};
 	}
 
-	//  validateForm = errors => {
-	//    let valid = true;
-	//    Object.values(errors).forEach(val => val.length > 0 && (valid = false));
-	//    return valid;
-	//  };
+	  validateForm = errors => {
+	   let valid = true;
+	   Object.values(errors).forEach(val => val.length > 0 && (valid = false));
+	   return valid;
+	  };
 
-	//  handleChange = e => {
-	//    const { name, value } = e.target;
-	//    let errors = this.state.errors;
-	//    switch (name) {
+	  handleChange = e => {
+	   const { name, value } = e.target;
+	    let errors = this.state.errors;
+	    switch (name) {
 
-	//      case "section":
-	//        errors.section = value === " " ? "Select section" : "";
-	//        break;
+	      case "section":
+	        errors.section = value === " " ? "Select section" : "";
+	        break;
 
-	//      case "sem":
-	//        errors.sem = value === " " ? "Select sem" : "";
-	//        break;
+	      case "sem":
+	       errors.sem = value === " " ? "Select sem" : "";
+	       break;
 
-	//      default:
-	//        break;
-	//    }
+	      default:
+	       break;
+	   }
 
-	//    this.setState({ errors, [name]: value });
-	//  };
+	   this.setState({ errors, [name]: value });
+	  };
 
 	render() {
 		return (
