@@ -49,9 +49,6 @@ ReactDOM.render(
 				<Route exact path="/login" component={Login} />
 				<Route exact path="/display" component={Time} />
 				<Route exact path="/studentlogin" component={Studentlogin} />
-				<Route exact path="/stud" component={Student} />
-				<Route exact path="/rooms" component={Room} />
-				<Route exact path="/fac" component={Faculty} />
 				<Route exact path="/feat" component={Feature} />
 				<Route exact path="/booking" component={Booking} />
 				// <Route exact path="/support" component={support} />
