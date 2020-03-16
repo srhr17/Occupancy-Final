@@ -35,11 +35,10 @@ import faqs from './faqs.jsx';
 
 import Feature from './Feature.js';
 import contactus from './contactus.jsx';
-import Room from './Room.js';
+
 import adminlogin from './adminlogin.js';
 import Booking from './booking.js';
-import Student from './Student.js';
-import Faculty from './Faculty.js';
+
 import feedback from './feedback.jsx';
 
 ReactDOM.render(
